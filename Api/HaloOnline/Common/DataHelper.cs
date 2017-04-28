@@ -99,6 +99,7 @@ namespace HaloOnline.Common
             previousPeriod.To = period.From.AddSeconds(-1);
             previousPeriod.From = previousPeriod.To.AddDays(daysInterval);
             previousPeriod.From = new DateTime(previousPeriod.From.Year, previousPeriod.From.Month, previousPeriod.From.Day, 0, 0, 0);
+            previousPeriod.To = new DateTime(previousPeriod.To.Year, previousPeriod.To.Month, previousPeriod.To.Day, 23, 59, 59);
 
             return previousPeriod;
         }
