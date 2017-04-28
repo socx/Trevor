@@ -34,11 +34,19 @@ namespace HaloOnline.Common
                                 sqlParameters.Add(new SqlParameter("@HasWorkOrder", true));
                             break;
                         case "StartDate":
-                        case "EndDate":
-                            var dateValue = new DateTime();
-                            if( DateTime.TryParse(propertyValue.ToString(), out dateValue))
+                            var startDateValue = new DateTime();
+                            if (DateTime.TryParse(propertyValue.ToString(), out startDateValue))
                             {
-                                sqlParameters = sqlParameters.Update(new SqlParameter($"@{prop.Name}", dateValue));
+                                startDateValue = new DateTime(startDateValue.Year, startDateValue.Month, startDateValue.Day, 0, 0, 0);
+                                sqlParameters = sqlParameters.Update(new SqlParameter($"@{prop.Name}", startDateValue));
+                            }
+                            break;
+                        case "EndDate":
+                            var endDateValue = new DateTime();
+                            if (DateTime.TryParse(propertyValue.ToString(), out endDateValue))
+                            {
+                                endDateValue = new DateTime(endDateValue.Year, endDateValue.Month, endDateValue.Day, 23, 59, 59);
+                                sqlParameters = sqlParameters.Update(new SqlParameter($"@{prop.Name}", endDateValue));
                             }
                             break;
                         case "ImagePath":
@@ -123,5 +131,14 @@ namespace HaloOnline.Common
             dt = DateTime.ParseExact(dateString, "yyyyMMdd", CultureInfo.InvariantCulture);
             return dt;
         }
+
+        public static DateRange BuildDateRangeFromSqlFormat(string startDateString, string endDateString)
+        {
+            DateRange period = new DateRange { From = DateTime.Parse(startDateString), To = DateTime.Parse(endDateString) };
+            period.From = new DateTime(period.From.Year, period.From.Month, period.From.Day, 0, 0, 0);
+            period.To = new DateTime(period.To.Year, period.To.Month, period.To.Day, 23, 59, 59);
+            return period;
+        }
+
     }
 }
