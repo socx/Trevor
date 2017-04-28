@@ -156,8 +156,8 @@ namespace HaloOnline.Reports.Services
         {
             var responseMessage = new ReportResponseMessage();
 
-            //TODO: Convert string date to DateTime properly
-            DateRange period = new DateRange { From = DateTime.Parse(reportRequest.StartDate), To = DateTime.Parse(reportRequest.EndDate) };
+
+            DateRange period = DataHelper.BuildDateRangeFromSqlFormat(reportRequest.StartDate, reportRequest.EndDate);
             var parameters = DataHelper.BuildParameters(reportRequest);
             var dtResponses = HaloDatabase.GetDataTable("dbo.rptGetSurveyRespondents", parameters.ToArray());
 
