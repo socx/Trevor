@@ -306,8 +306,8 @@ namespace HaloOnline.Reports.Services
         {
             var confidenceExperienceData = new CustomerExperienceMessage();
             confidenceExperienceData.ChartData = new List<CustomerExperienceChartDataEntry>();
-            DateRange period = new DateRange { From = DateTime.Parse(reportRequest.StartDate), To = DateTime.Parse(reportRequest.EndDate) };
-            period.To = new DateTime(period.To.Year, period.To.Month, period.To.Day, 23, 59, 59);
+            
+            DateRange period = DataHelper.BuildDateRangeFromSqlFormat(reportRequest.StartDate, reportRequest.EndDate);
             var previousPeriod = DataHelper.GetPreviousPeriod(period);
             confidenceExperienceData.Periods = new Periods
             {
