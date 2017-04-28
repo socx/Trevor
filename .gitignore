@@ -26,5 +26,7 @@ typings
 *.xml
 bin
 obj
+packages
+
 # Don't store Survey in repo for now
 Survey
