@@ -1,0 +1,30 @@
+.DS_STORE
+*.log
+
+dist
+coverage
+.jshintrc
+
+node_modules
+
+*.css
+*.css.map
+*.pubxml
+.brackets.json
+
+.idea
+.cache
+*.pyc
+typings
+
+############################
+# Hide Api stuff
+############################
+*.pdf
+*.dll
+*.pdb
+*.xml
+bin
+obj
+# Don't store Survey in repo for now
+Survey
