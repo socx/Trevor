@@ -24,6 +24,7 @@ typings
 *.dll
 *.pdb
 *.xml
+*.pubxml.user
 bin
 obj
 packages
