@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Halo Online | Reporting</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="halo works" name="description" />
+        <meta content="halo works" name="author" />
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
+        <link href="../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
+        <!--<link href="../assets/global/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/global/plugins/clockface/css/clockface.css" rel="stylesheet" type="text/css" />-->
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="../assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="../assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="../assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/layouts/layout4/css/themes/light.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="../assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+        <!--<link rel="shortcut icon" href="favicon.ico" />-->         
+        <!-- BEGIN CSS HACK -->
+        <link href="../css/halo.css" rel="stylesheet" type="text/css" />
+        <!-- END CSS HACK -->
+    </head>
+    <!-- END HEAD -->
+
+    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner container">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="#">
+                        <img src="../images/halo_logo.png" alt="logo" />
+                    </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="separator hide"> </li>
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar" style="display:none">
+                                <a href="javascript:;" class="dropdown-toggle disabled-link" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-flag"></i>
+                                    <span class="badge badge-danger"> 7 </span>
+                                    <span class="badge badge-warning"> 5 </span>
+                                </a>
+                            </li>
+                            <!-- END NOTIFICATION DROPDOWN -->
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="">
+                                <button type="button" class="btn-log-out btn btn-outline report"><i class="fa fa-key"></i> Log Out</button>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <div class="container">
+            <!-- BEGIN CONTAINER -->
+            <div class="page-container">
+                <!-- BEGIN SIDEBAR -->
+                <!-- END SIDEBAR -->
+                <!-- BEGIN CONTENT -->
+                <div class="page-content-wrapper">
+                    <!-- BEGIN CONTENT BODY -->
+                    <div class="page-content">
+                        <!-- BEGIN PAGE HEAD-->
+                        <div class="page-head">
+                            <!-- BEGIN PAGE TITLE -->
+                            <div class="page-title" id="page-title">
+                                <h1>
+                                    Report
+                                    <small> details of all survey responses</small>
+                                </h1>
+                            </div>
+                            <!-- END PAGE TITLE -->
+                        </div>
+                        <!-- END PAGE HEAD-->
+                        <!-- BEGIN PAGE BREADCRUMB -->
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li>
+                                <a href="report_listing.html">Report Listing</a>
+                                <i class="fa fa-circle"></i>
+                            </li>
+                            <li>
+                                <span class="active">Report</span>
+                            </li>
+                        </ul>
+                        <!-- END PAGE BREADCRUMB -->
+                        <!-- BEGIN PAGE BASE CONTENT -->
+                        <div class="row" id="filter-form-div">
+                            <div class="col-md-12">
+                                <!-- BEGIN FILTER FORM PORTLET-->
+                                <div class="portlet box purple">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            <i class="fa fa-filter"></i> Filters
+                                        </div>
+                                        <div class="tools">
+                                            <!--<a href="" class="collapse"> </a>-->
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body">
+                                        <div class="alert alert-danger display-hide" id="message-div">&nbsp;</div>
+                                        <div id="date-range-div">
+                                            <h4>Date Range</h4>
+                                            <div class="form-group">
+                                                <div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="dd/mm/yyyy" data-date-end-date="-1d">
+                                                    <input type="text" class="form-control" name="from" id="from">
+                                                    <span class="input-group-addon"> to </span>
+                                                    <input type="text" class="form-control" name="to" id="to">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" class="btn purple" id="btn-search">
+                                                    <i class="fa fa-search"></i> Search
+                                                </button>
+                                            </div>
+
+                                            <!-- BEGIN PDF MODAL -->            
+                                            <div class="modal fade" id="pdf-modal" role="basic" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                                            <h4 class="modal-title">PDF Report</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <iframe id='pdf-iframe' src="" width="800" height="600" frameBorder="0">Browser not compatible.</iframe>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-outline sbold purple" data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>
+                                            <!-- END PDF MODAL -->
+
+                                            <hr>
+                                            <div id="numberOfResponses-div">
+
+                                            </div>
+                                        </div>
+                                        <div class="form display-hide" id="filter-question-div">
+                                            <form action="#">
+                                                <div class="form-body">
+                                                    <div class="form-group top" id="filterQuestion1-group">
+                                                        <label class="control-label" id="filterQuestion1-label">filterQuestion1</label>
+                                                        <select class="form-control filterQuestion" id="filterQuestion1" disabled></select>
+                                                        <span class="help-block filter-question-prompt display-hide" id="filterQuestion1-promptid">  </span>
+                                                    </div>
+                                                    <div class="form-group" id="filterQuestion2-group">
+                                                        <label class="control-label" id="filterQuestion2-label">filterQuestion2</label>
+                                                        <select class="form-control filterQuestion" id="filterQuestion2" disabled></select>
+                                                        <span class="help-block filter-question-prompt display-hide" id="filterQuestion2-promptid">  </span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="md-radio-list display-hide" id="contract-filters-div">
+                                            <h4>Contract Filters</h4>
+                                            <p>The dates selected may include responses linked to individual orders as well as responses for the service provider as a whole.</p>
+                                            <p><strong>Please select one of the following options for this report:</strong></p>
+
+                                            <div class="md-radio">
+                                                <input type="radio" id="allReport" name="radiobtn-responses" class="md-radiobtn" value="all" checked>
+                                                <label for="allReport">
+                                                    <span></span>
+                                                    <span class="check"></span>
+                                                    <span class="box"></span> View all survey responses - <a id="all-report-span"></a>
+                                                </label>
+                                            </div>
+                                            <div class="md-radio">
+                                                <input type="radio" id="withoutFiltersReport" name="radiobtn-responses" class="md-radiobtn" value="without">
+                                                <label for="withoutFiltersReport">
+                                                    <span></span>
+                                                    <span class="check"></span>
+                                                    <span class="box"></span> View responses without reporting filters - <a id="without-filters-report-span"></a>
+                                                </label>
+                                            </div>
+                                            <div class="md-radio">
+                                                <input type="radio" id="withFiltersReport" name="radiobtn-responses" class="md-radiobtn" value="with">
+                                                <label for="withFiltersReport">
+                                                    <span></span>
+                                                    <span class="check"></span>
+                                                    <span class="box"></span> View responses with reporting filters - <a id="with-filters-report-span"></a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!--</form>-->
+                                    </div>
+
+                                    <div class="portlet-body form display-hide" id="report-filters-div">
+                                        <!-- BEGIN FORM-->
+                                            <div class="form-body">
+                                                <div class="form-group top" id="location1-group">
+                                                    <label class="control-label" id="location1-label">Location 1</label>
+                                                    <select class="form-control workOrderSelect" id="location1" disabled></select>
+                                                </div>
+                                                <div class="form-group" id="location2-group">
+                                                    <label class="control-label" id="location2-label">Location 2</label>
+                                                    <select class="form-control workOrderSelect" id="location2" disabled></select>
+                                                </div>
+                                                <div class="form-group" id="location3-group">
+                                                    <label class="control-label">Location 3</label>
+                                                    <select class="form-control workOrderSelect" id="location3" disabled></select>
+                                                </div>
+                                                <div class="form-group" id="location4-group">
+                                                    <label class="control-label">Location 4</label>
+                                                    <select class="form-control workOrderSelect" id="location4"></select>
+                                                </div>
+                                                <div class="form-group" id="sla-group">
+                                                    <label class="control-label">SLA</label>
+                                                    <select class="form-control workOrderSelect" id="sla"></select>
+                                                </div>
+                                                <div class="form-group" id="slaBreach-group">
+                                                    <label class="control-label">SLA Breach</label>
+                                                    <select class="form-control workOrderSelect" id="slaBreach"></select>
+                                                </div>
+                                                <div class="form-group" id="slaContract-group">
+                                                    <label class="control-label">SLA Contract</label>
+                                                    <select class="form-control workOrderSelect" id="slaContract"></select>
+                                                </div>
+                                                <div class="form-group" id="slaService-group">
+                                                    <label class="control-label">SLA Service</label>
+                                                    <select class="form-control workOrderSelect" id="slaService"></select>
+                                                </div>
+                                                <div class="form-group" id="slaServiceType-group">
+                                                    <label class="control-label">SLA Service Type</label>
+                                                    <select class="form-control workOrderSelect" id="slaServiceType"></select>
+                                                </div>
+                                                <div class="form-group" id="failure-group">
+                                                    <label class="control-label">Failure</label>
+                                                    <select class="form-control workOrderSelect" id="failure"></select>
+                                                </div>
+                                                <div class="form-group" id="problem-group">
+                                                    <label class="control-label">Problem</label>
+                                                    <select class="form-control workOrderSelect" id="problem"></select>
+                                                </div>
+                                                <div class="form-group" id="cause-group">
+                                                    <label class="control-label">Cause</label>
+                                                    <select class="form-control workOrderSelect" id="cause"></select>
+                                                </div>
+                                                <div class="form-group last" id="remedy-group">
+                                                    <label class="control-label">Remedy</label>
+                                                    <select class="form-control workOrderSelect" id="remedy"></select>
+                                                </div>
+                                            </div>
+                                        <!-- END FORM-->
+                                    </div>
+
+                                    <div class="portlet-body display-hide" id="build-report-div">
+                                        <div class="col-md-9">
+
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn purple" id="btn-build-report">
+                                                <i class="fa fa-line-chart"></i> Build Report
+                                            </button>
+                                        </div>
+                                        <div class="col-md-1">
+
+                                        </div>
+                                        <p>&nbsp;</p>
+                                    </div>
+
+                                </div> 
+                                <!-- END FILTER FORM PORTLET-->
+                            </div>
+                            <input type='submit' name='submitForm' id="submitForm" value='Submit' class="display-hide" />
+                            <iframe name="pdfIFrame" frameborder="0" style="display:none"></iframe>
+                        </div>
+                        </form>
+                        <div class="row" id="report-body" style="display:none">
+                            <div class="col-md-12">
+                                <!-- BEGIN REPORT PORTLET-->
+                                <div class="portlet light bordered">
+                                    <div class="portlet-title">
+                                        <div class="actions">
+                                            <button type="button" class="btn purple upper" id="btn-print-pdf" data-toggle="modal" data-target="pdf-modal">
+                                                <i class="fa fa-file-pdf-o font-red"></i> Build Pdf
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body">
+                                        <div id="logo-div" style="text-align:center">
+                                            <img id="survey-logo" src="" alt="companylogo" />
+                                        </div>
+                                        <h3 style="text-align:center; color: purple" id="report-header">Report</h3>
+                                        <div id="number-of-responses-div">
+                                            <p class="section-header">Number of Responses:</p>
+                                            <p>
+                                                <span id="current-period-respondents"></span> customers completed the survey during this reporting period <span id="current-period"></span> compared with
+                                                <span id="previous-period-respondents"></span> customers over the previous period of the same duration <span id="previous-period"></span>.
+                                            </p>
+                                        </div>
+                                        <div id="confidence-score-div">
+                                            <p class="section-header">Customer Confidence Score:</p>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="col-md-6 col-sm-6 col-xs-6" style="text-align:center" >
+                                                    <div id="confidence_score_chart_1" class="chart" style="height: 280px; width: 280px; display: block; margin: auto"> </div>
+                                                    <div id="confidence_score_chart_1_text"  style="text-align:center"><strong>very or fairly confident</strong> </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-6 col-xs-6" style="text-align:center">
+                                                    <div id="confidence_score_chart_2" class="chart" style="height: 280px; width: 280px; display: block; margin: auto"> </div>
+                                                    <div id="confidence_score_chart_2_text"  style="text-align:center"> <strong>very confident</strong></div>
+                                                </div>
+                                            </div>
+                                            <p>&nbsp;</p>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <p>
+                                                    We want our customers to feel completely confident about the service which we deliver. The dials above highlight the percentage (%) of customers,
+                                                    during the current reporting period and based on the reporting criteria you selected, that were either "very" or "fairly confident" that their next
+                                                    experience of our services would be good.
+                                                    <strong>
+                                                        <span id="veryandfairly-confident-respondents"></span> were either "very or fairly confident"
+                                                        with <span id="very-confident-respondents"></span> "very confident". <span id="not-confident-respondents"></span> said they were "not very" or "not at all confident".
+                                                    </strong>
+                                                </p>
+                                                <p>
+                                                    Since the first survey response date and the end date selected for this report and based on the same reporting criteria, 
+                                                    the average score for customers saying they were "very confident" is <span id="alltime-very-confident-respondents"></span>. 
+                                                    <span id="alltime-veryandfairly-confident-respondents"></span> said they were either "very or fairly confident" with
+                                                    <span id="alltime-not-confident-respondents"></span> "not very" or "not at all confident.                                                    
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="trend-top-page-break">&nbsp;</div>
+                                        <div id="confidence-trend-div">
+                                            <p class="section-header">Customer Confidence Trend:</p>
+                                            <div class="col-md-12">
+                                                <p>
+                                                    The chart below tells us how the customer confidence score has changed over the last six months (including part months) 
+                                                    working back from today`s date and based on the same reporting criteria. The trend line highlights the percentage of customers 
+                                                    that were "very confident" that their next experience of using our services would be good. 
+                                                </p>
+                                                <p>
+                                                   In order for the trend chart to appear, there has to be at least two months within the last six months where at least 
+                                                   one survey response was submitted.
+                                                </p>
+                                                <div id="no-trend-data-div" class="display-hide"></div>
+                                                <!--<div id="trend-page-break">&nbsp;</div> -->
+                                                <div class="col-md-1" id="confidence-trend-left">
+                                                    &nbsp;
+                                                </div>
+                                                <div class="col-md-10" id="confidence-trend-center">
+                                                    <div id="confidence_trend_chart" class="chart" style="height: 420px;"> </div>
+                                                </div>
+                                                <div class="col-md-1" id="confidence-trend-right">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="trend-bottom-page-break">&nbsp;</div>
+                                        <!--<div style="page-break-after:always">&nbsp;</div>-->
+                                        <div id="customer-experience-div">
+                                            <p class="section-header">The Customer Experience:</p>
+                                            <div class="col-md-12 col-sm-12">
+                                                <p>
+                                                    The chart below shows how customers rated the service for each of the paired statement slider questions in the survey. 
+                                                    The chart illustrates the distribution of responses along with the mean or average scores for both the current as well as the previous reporting period. 
+                                                    The length of the previous reporting period will match the length of the current reporting period. 
+                                                    If the mean score moves to the right, the average scores during the period are improving. 
+                                                    If the mean score has moved to the left the average scores have got worse. 
+                                                    You can also view the additional comments made by customers with their corresponding score for each individual question displayed alongside.
+                                                </p>
+                                            </div>
+                                            <div id="customer-experience-chart-div"></div>
+                                        </div>
+
+                                        <div id="customer-experience-page-break">&nbsp;</div>
+                                        <div id="service-recognition-div">
+                                            <p class="section-header">Recognition for Great Service:<span class="badge badge-success font-dark bold" id="recognition-span"> 0 </span></p>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td width="5%">
+                                                        <div class="col-md-1">
+                                                            <img src="..\images\gold_star_32.jpg" alt="gold star" id="gold-start" />
+                                                        </div>
+                                                    </td>
+                                                    <td width="95%">
+                                                        <p>The names of people and the associated comments, where submitted, are listed exactly as they were typed in.</p>                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="col-md-11" id="service-recognition-comment-div">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="amber-flag-div">
+                                            <p class="section-header">Amber Flag Responses: <span class="badge badge-warning font-dark bold" id="amber-flag-span"> 0 </span></p>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td width="5%">
+                                                        <div class="col-md-1">
+                                                            <img src="..\images\amber_flag_32.jpg" alt="amber flag" id="amber-flag" />
+                                                        </div>
+                                                    </td>
+                                                    <td width="95%">
+                                                        <div class="col-md-11">
+                                                            <p>
+                                                                During this reporting period <span class="flag-current-period"></span>, <span id="current-amberflag"></span> customer(s) completed the survey with an amber flag response.
+                                                                This compares with <span id="previous-amberflag"></span> customer(s) over the previous reporting period of the same duration <span class="flag-previous-period"></span>.
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div id="red-flag-div">
+                                            <p class="section-header">Red Flag Responses: <span class="badge badge-danger font-dark bold" id="red-flag-span"> 0 </span></p>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td width="5%">
+                                                        <div class="col-md-1">
+                                                            <img src="..\images\red_flag_32.jpg" alt="red flag" id="red-flag" />
+                                                        </div>
+                                                    </td>
+                                                    <td width="95%">
+                                                        <div class="col-md-11">
+                                                            <p>
+                                                                During this reporting period <span class="flag-current-period"></span>, <span id="current-redflag"></span> customer(s) completed the survey with a red flag response.
+                                                                This compares with <span id="previous-redflag"></span> customer(s) over the previous reporting period of the same duration <span class="flag-previous-period"></span>.
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div style="page-break-after:always">&nbsp;</div>
+                                        <div id="period-comments-div" class="display-hide">                                          
+                                            <p class="section-header">Comments for this period:</p> 
+                                            <p>
+                                                This section lists all of the comments submitted in this reporting period as well as highlighting any comments linked to either a red and/or amber flag response.
+                                            </p>
+                                        </div>
+                                        <div id="direct-comments-div" class="display-hide">                                          
+                                            <p class="section-header">Comments received from other sources:</p> 
+                                            <table width="100%">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="col-md-11" id="direct-comments-main-div">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <p>&nbsp;</p> <!--DO NOT REMOVE THIS EMPTY PARAGRAPH TAG FOR ANY REASON AS REMOVAL DESTROYS THE PAGE. DON'T ASK ME WHY-->
+                                        </div>
+                                    </div>
+                                    <!-- END REPORT PORTLET-->
+                                </div>
+                            </div>
+                            <!-- END PAGE BASE CONTENT -->
+                        </div>
+                        <!-- END CONTENT BODY -->
+                    </div>
+                    <!-- END CONTENT -->
+
+                </div>
+            </div>
+            <!-- END CONTAINER -->
+            <!-- BEGIN FOOTER -->
+            <div class="page-footer">
+                <div class="page-footer-inner">
+                    2016 &copy;
+                    <a href="http://thehaloworks.com" title="Halo Works." target="_blank">Halo Works.</a>
+                </div>
+                <div class="scroll-to-top">
+                    <i class="icon-arrow-up font-purple"></i>
+                </div>
+            </div>
+            <!-- END FOOTER -->
+        </div>
+        <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <!--<script src="../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>-->
+        <!--<script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>-->
+        <!-- END CORE PLUGINS -->        
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <script src="../assets/global/plugins/moment.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+        <!--<script src="../assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/clockface/js/clockface.js" type="text/javascript"></script>-->
+
+        <script src="../assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/amcharts/amcharts/plugins/responsive/responsive.js" type="text/javascript"></script>
+        
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="../assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <script src="../js/common/access-control.js" type="text/javascript"></script>
+        <script src="../js/common/config.js" type="text/javascript"></script>
+        <script src="../js/common/utils.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->        
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
+        <script src="../assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
+        <script src="../js/reports/guage.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-search.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-builder.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-header.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-responses.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-confidence-score.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-confidence-trend.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-customer-experience.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-flags.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-recognition.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-period-comments.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-direct-comments.js" type="text/javascript"></script>
+        <script src="../js/reports/reports-pdf-builder.js" type="text/javascript"></script>
+        <!--<script src="../assets/pages/scripts/components-date-time-pickers.min.js" type="text/javascript"></script>-->
+        <script src="../js/external/components-date-time-pickers.min.js" type="text/javascript"></script>
+        
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <!--<script src="../assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>-->
+        <!--<script src="../assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script>
+        <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>-->
+        <!-- END THEME LAYOUT SCRIPTS -->
+    </body>
+
+</html>
