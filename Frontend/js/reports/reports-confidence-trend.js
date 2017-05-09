@@ -13,7 +13,7 @@ var ReportsConfidenceTrend = function () {
                     complete: function () {
                         Utils.unblockUI('#confidence-trend-div');
                     },
-                    url: Config.getApiRootUrl() + '/reports/confidencetrenddata/' + surveyID,
+                    url: Config.getApiRootUrl() + '/reports/confidencetrenddata?' + surveyID,
                     success: function (json) {
                         if (json && (json.HasEnoughDataPoints === true))
                         {

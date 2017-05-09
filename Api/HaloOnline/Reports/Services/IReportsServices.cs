@@ -17,7 +17,7 @@ namespace HaloOnline.Reports.Services
         ReportsSurvey GetSurveyStatistics(int surveyID, DateRange period);
         ReportResponseMessage GetResponses(ReportRequest reportRequest);
         ConfidenceScoreMessage GetCustomerConfidenceScoreData(ReportRequest reportRequest);
-        IEnumerable<ConfidenceTrendMessage> GetCustomerConfidenceTrendData(int SurveyId);
+        IEnumerable<ConfidenceTrendMessage> GetCustomerConfidenceTrendData(ReportRequest reportRequest);
         CustomerExperienceMessage GetCustomerExperienceData(ReportRequest reportRequest);
         RecognitionMessage GetRecognitionData(ReportRequest reportRequest);
         FlagMessage GetFlagsData(ReportRequest reportRequest);

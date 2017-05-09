@@ -125,13 +125,13 @@ namespace HaloOnline.Reports.Store
         }
 
         [HttpGet]
-        [Route("confidencetrenddata/{surveyid}")]
-        public IHttpActionResult GetConfidenceTrendData(int SurveyId)
+        [Route("confidencetrenddata")]
+        public IHttpActionResult GetConfidenceTrendData([FromUri] ReportRequest reportRequest)
         {
             var dataPoints = new List<dynamic>();
             try
             {
-                var data = _reportsServices.GetCustomerConfidenceTrendData(SurveyId);
+                var data = _reportsServices.GetCustomerConfidenceTrendData(reportRequest);
                 var dataPointsWithValue = 0;
                 if (data != null)
                 {

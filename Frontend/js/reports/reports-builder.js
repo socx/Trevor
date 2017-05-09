@@ -103,7 +103,7 @@ jQuery(document).ready(function () {
             ReportsHeader.init(passcode);
             ReportsResponses.init(queryString);			
             ReportsConfidenceScore.init(queryString);			
-            ReportsConfidenceTrend.init(surveyID);
+            ReportsConfidenceTrend.init(queryString);
             ReportsCustomerExperience.init(queryString);
             ReportsRecognition.init(queryString);
             ReportsFlags.init(queryString);

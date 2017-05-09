@@ -258,15 +258,16 @@ namespace HaloOnline.Reports.Services
             return ConfidenceScoreMessage;
         }
         
-        public IEnumerable<ConfidenceTrendMessage> GetCustomerConfidenceTrendData(int surveyId)
+        public IEnumerable<ConfidenceTrendMessage> GetCustomerConfidenceTrendData(ReportRequest reportRequest)
         {
             var confidenceTrendData = new List<ConfidenceTrendMessage>();
+            var parameters = DataHelper.BuildParameters(reportRequest);
 
-            var parameters = new List<SqlParameter>();
+            //var parameters = new List<SqlParameter>();
             var yesterday = DateTime.Today.AddDays(-1);
             DateRange period = new DateRange { From = yesterday.AddMonths(-6), To = yesterday };
 
-            parameters = parameters.Update(new SqlParameter("@SurveyId", surveyId));
+            //parameters = parameters.Update(new SqlParameter("@SurveyId", surveyId));
             parameters = parameters.Update(new SqlParameter("@StartDate", period.From));
             parameters = parameters.Update(new SqlParameter("@EndDate", period.To));
 
