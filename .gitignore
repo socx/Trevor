@@ -7,7 +7,7 @@ coverage
 
 node_modules
 
-*.css
+
 *.css.map
 *.pubxml
 .brackets.json

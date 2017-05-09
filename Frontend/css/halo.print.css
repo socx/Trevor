@@ -1,0 +1,93 @@
+﻿        body {
+            background-color: none
+        }
+        a {
+            color: #75297F;
+        }
+
+        .page-header.navbar {
+            background: #75297F;
+        }
+        /*.search-form {display: none!important}*/
+        .btn-theme-panel .btn > i {
+            display: none !important;
+        }
+
+        .page-sidebar.navbar-collapse {
+            display: none !important;
+        }
+
+        .page-actions {
+            display: none;
+        }
+        /*.dropdown-menu {display: none!important}*/
+        #header_inbox_bar {
+            visibility: hidden;
+        }
+
+        #header_task_bar {
+            visibility: hidden;
+        }
+
+        .username {
+            color: #ffffff !important;
+        }
+
+        .datepicker.dropdown-menu {
+            z-index: 9999 !important;
+        }
+
+        .section-header {
+            color: #75297F;
+            font-weight: bold;
+        }
+        .check { background:#75297F !important;}
+        .table-toggle { display:none; }
+        .table-toogle tbody thead td { font-size : 0.9em !important}
+        /*.login .content { width: 400px !important}*/
+        .create-account  { display:none; }
+        .pagination>li>a, .pagination>li>span { color : #75297F}
+        .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+        {
+            background:#75297F;
+            border-color:#75297F
+        }
+        .hideme{ display:none !important}
+        th.dt-center, td.dt-center { text-align: center; }
+        .page-header.navbar.navbar-fixed-top, .page-header.navbar.navbar-static-top {height :100px}
+        .purple.box.portlet > .portlet-title, .purple.portlet, .portlet > .purple.portlet-body {background-color:#75297F;}
+        .btn.purple:not(.btn-outline) {background-color:#75297F; border-color:#75297F}
+       .page-header.navbar .top-menu .navbar-nav>li.dropdown  .dropdown-toggle:hover { background-color: #75297F}       
+       .page-header.navbar .top-menu .navbar-nav>li.dropdown.open .dropdown-toggle { background-color: #75297F}
+       .alert-success {background-color:#D597DD; border-color:#D597DD; color: #fff}
+       .datepicker .datepicker-switch { background-color: #75297F ; color: #fff}
+       .datepicker .datepicker-switch, .datepicker .next, .datepicker .prev, .datepicker tfoot tr th, .input-group.date .input-group-addon { background-color: #75297F ; color: #fff }
+       
+       .dropdown dropdown-user dropdown-dark { background-color: #75297F ; color: #fff }
+        .btn-log-out {
+            color: #ffffff !important;
+        }
+
+        .page-header.navbar .menu-toggler.sidebar-toggler{
+            display:none !important;
+        }
+        
+        .current-box { font-size:15px; font-family:Tahoma; padding-left:15px; border:1px solid #1a81ae; background-color:#1a81ae; overflow:hidden; }
+        .previous-box { font-size:15px; font-family:Tahoma; padding-left:15px; border:1px solid #f7921e; background-color:#f7921e; overflow:hidden; }
+
+        table.dataTable thead .sorting_asc {
+            background: none
+        }
+
+        /*@media print {
+            print-page-break {page-break-after: always;}
+        }*/
+        /*.print-page-break {page-break-after: always;}*/
+        /*
+        svg path[stroke-opacity="0"] {
+            visibility:hidden;
+        }
+        */
+        svg > g > path[stroke-opacity="0"] {
+            visibility: hidden;
+        }
